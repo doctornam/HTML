@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="srpla"></div>
+    <div id="time"></div>
+    <script type="text/javascript" src="https://logins.daum.net/contents/min/js/login-default.js?ver=220125030540"></script>
+    <script type="text/javascript">
+        var x = daumlogin.crypto.BigInteger;
+        var k = new x("115b8b692e0e045692cf280b436735c77a5a9e8a9e7ed56c965f87db5b2a2ece3", 16), y = new x("2");
+        D = daumlogin.crypto.SecureRandom;
+        a = new D();
+        var F = new x(16, a);
+        g = y.modPow(F, k);
+        srpla = g.toString(16);
+        document.all("srpla").innerHTML='"srpla:'  + srpla + '"'
+        time = new Date().getTime();
+        document.all("time").innerHTML='"time:'  + time + '"'
+    </script>
+</body>
+</html>
