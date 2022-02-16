@@ -3,6 +3,7 @@
 <body>
     <div id="srpla"></div>
     <div id="time"></div>
+    <div id="result"></div>
     <script type="text/javascript" src="https://logins.daum.net/contents/min/js/login-default.js?ver=220125030540"></script>
     <script type="text/javascript">
         var x = daumlogin.crypto.BigInteger;
@@ -15,6 +16,7 @@
         document.all("srpla").innerHTML='"srpla:'  + srpla + '"'
         time = new Date().getTime();
         document.all("time").innerHTML='"time:'  + time + '"'
+        document.all("result").innerHTML = "{srpla:" + srpla + ", time:" + time + "}";
     </script>
 </body>
 </html>
